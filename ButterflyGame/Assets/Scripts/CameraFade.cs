@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraFade : MonoBehaviour
 {
@@ -35,9 +36,15 @@ public KeyCode key = KeyCode.Space; // Which key should trigger the fade?
 
     private void Update()
     {
-                 
+        if (alpha >= 1f)
+        {
+                    Debug.Log("Time's Up!");
+                    SceneManager.LoadScene("SampleScene");
+        }
         
     }
+
+
     public void OnGUI()
     {
         if (alpha > 0f) GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), texture);
@@ -50,4 +57,8 @@ public KeyCode key = KeyCode.Space; // Which key should trigger the fade?
             if (alpha <= 0f || alpha >= 1f) direction = 0;
         }
     }
+
+
+
+
 }
