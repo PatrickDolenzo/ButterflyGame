@@ -11,7 +11,7 @@ public KeyCode key = KeyCode.Space; // Which key should trigger the fade?
     // Rather than Lerp or Slerp, we allow adaptability with a configurable curve
     public AnimationCurve Curve = new AnimationCurve(new Keyframe(0, 1),
         new Keyframe(0.5f, 0.5f, -1.5f, -1.5f), new Keyframe(1, 0));
-    public bool startFadedOut = false;
+   
 
 
     private float alpha = 0f; 
@@ -21,12 +21,11 @@ public KeyCode key = KeyCode.Space; // Which key should trigger the fade?
 
     private void Start()
     {
-        if (startFadedOut) alpha = 1f; else alpha = 0f;
         texture = new Texture2D(1, 1);
         texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
         texture.Apply();
 
-        if (alpha >= 0f) // Fully faded out
+        if (alpha >= 0f) // 
         {
             alpha = 0f;
             time = 1f;
@@ -36,10 +35,15 @@ public KeyCode key = KeyCode.Space; // Which key should trigger the fade?
 
     private void Update()
     {
+
+        Debug.Log(alpha);
         if (alpha >= 1f)
         {
+                    alpha = 0f;
                     Debug.Log("Time's Up!");
+                    ColourManager._colour = "";
                     SceneManager.LoadScene("SampleScene");
+
         }
         
     }
