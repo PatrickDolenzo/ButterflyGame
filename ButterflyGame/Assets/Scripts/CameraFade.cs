@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CameraFade : MonoBehaviour
 {
-public KeyCode key = KeyCode.Space; // Which key should trigger the fade?
     public float speedScale = 1f;
     public Color fadeColor = Color.black;
     // Rather than Lerp or Slerp, we allow adaptability with a configurable curve
@@ -25,7 +24,7 @@ public KeyCode key = KeyCode.Space; // Which key should trigger the fade?
         texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
         texture.Apply();
 
-        if (alpha >= 0f) // 
+        if (alpha <= 0f) // 
         {
             alpha = 0f;
             time = 1f;
@@ -42,7 +41,7 @@ public KeyCode key = KeyCode.Space; // Which key should trigger the fade?
                     alpha = 0f;
                     Debug.Log("Time's Up!");
                     ColourManager._colour = "";
-                    SceneManager.LoadScene("SampleScene");
+                    SceneManager.LoadScene("GameOver");
 
         }
         

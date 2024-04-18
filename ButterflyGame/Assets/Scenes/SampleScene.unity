@@ -417,9 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917f03d5cd793e418535cd1395eecb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: 32
   speedScale: 0.025
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeColor: {r: 0, g: 0, b: 0, a: 0}
   Curve:
     serializedVersion: 2
     m_Curve:
@@ -453,7 +452,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  startFadedOut: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
