@@ -16,7 +16,14 @@ public class ColliderCheck : MonoBehaviour
 
         ColourManager._colour += _newcolour;
 
+        if (ColourManager._islast == false)
+        {
         SceneManager.LoadScene("TestColour2");
+        }
+        else
+        {
+         SceneManager.LoadScene("SampleScene");
+        }
     }
 
 }

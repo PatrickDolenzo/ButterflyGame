@@ -24,12 +24,10 @@ public class CameraFade : MonoBehaviour
         texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
         texture.Apply();
 
-        if (alpha <= 0f) // 
-        {
             alpha = 0f;
             time = 1f;
             direction = -1;
-            }
+            
     }
 
     private void Update()
@@ -39,6 +37,8 @@ public class CameraFade : MonoBehaviour
         if (alpha >= 1f)
         {
                     alpha = 0f;
+                    ColourManager._colour ="";
+                    ColourManager._islast = false;
                     Debug.Log("Time's Up!");
                     ColourManager._colour = "";
                     SceneManager.LoadScene("GameOver");
