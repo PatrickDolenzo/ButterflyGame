@@ -8,9 +8,15 @@ public class ColourManager : MonoBehaviour
 
     public static ColourManager Instance;
 
+    public static bool _islast = false; 
+
     public Sprite Yellow;
 
     public Sprite Blue;
+
+    public Sprite Green;
+
+    public Sprite Red;
 
     // Start is called before the first frame update
     void Start()
@@ -42,10 +48,23 @@ public class ColourManager : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = Blue;
                 Debug.Log("The Colour is " + _colour);
                 break;
-
-
-
-
+            case "Green":
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Green;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "Red":
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Red;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "GreenGreen":
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "RedRed":
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "BlueBlue":
+                Debug.Log("The Colour is " + _colour);
+                break;
             case "YellowYellow":
                 Debug.Log("The Colour is " + _colour);
                 break;

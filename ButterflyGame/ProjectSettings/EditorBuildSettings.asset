@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: dcbf3cb99a1afad468b2973823649210
+  - enabled: 1
+    path: Assets/Scenes/TestColour2.unity
+    guid: 53e11eb69f459ca4699e88255bed2f57
   m_configObjects: {}
