@@ -8,6 +8,8 @@ public class MenuController : MonoBehaviour
     public void StartButton()
     {
         Debug.Log("Going");
+        ColourManager._colour ="";
+        ColourManager._islast = false;
         SceneManager.LoadScene("TestColour");
     }
 

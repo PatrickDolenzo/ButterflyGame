@@ -57,10 +57,48 @@ public class ColourManager : MonoBehaviour
                 _islast = true;
                 Debug.Log("The Colour is " + _colour);
                 break;
+            case "YellowYellow":
+                top_wings.color = Color.yellow;
+                animator.runtimeAnimatorController = _yellow;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "YellowRed":
+                top_wings.color = Color.red;
+                animator.runtimeAnimatorController = _yellow;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "YellowBlue":
+                top_wings.color = Color.blue;
+                animator.runtimeAnimatorController = _yellow;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "YellowWhite":
+                top_wings.color = Color.white;
+                animator.runtimeAnimatorController = _yellow;
+                Debug.Log("The Colour is " + _colour);
+                break;
             case "Blue":
-                
                 animator.runtimeAnimatorController = _blue;
                 _islast = true;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "BlueBlue":
+                top_wings.color = Color.blue;
+                animator.runtimeAnimatorController = _blue;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "BlueRed":
+                top_wings.color = Color.red;
+                animator.runtimeAnimatorController = _blue;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "BlueYellow":
+                top_wings.color = Color.yellow;
+                animator.runtimeAnimatorController = _blue;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "BlueWhite":
+                animator.runtimeAnimatorController = _blue;
                 Debug.Log("The Colour is " + _colour);
                 break;
             case "Red":
@@ -69,18 +107,22 @@ public class ColourManager : MonoBehaviour
                 Debug.Log("The Colour is " + _colour);
                 break;
             case "RedRed":
-
-            
+                top_wings.color = Color.red;
+                animator.runtimeAnimatorController = _red;
                 Debug.Log("The Colour is " + _colour);
                 break;
-            case "BlueBlue":
-                top_wings.color = Color.green;
-                animator.runtimeAnimatorController = _blue;
+            case "RedBlue":
+                top_wings.color = Color.blue;
+                animator.runtimeAnimatorController = _red;
                 Debug.Log("The Colour is " + _colour);
                 break;
-            case "YellowYellow":
-
-            
+            case "RedYellow":
+                top_wings.color = Color.yellow;
+                animator.runtimeAnimatorController = _red;
+                Debug.Log("The Colour is " + _colour);
+                break;
+            case "RedWhite":
+                animator.runtimeAnimatorController = _red;
                 Debug.Log("The Colour is " + _colour);
                 break;
 
