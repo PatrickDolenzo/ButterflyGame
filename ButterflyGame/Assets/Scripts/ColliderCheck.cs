@@ -22,7 +22,7 @@ public class ColliderCheck : MonoBehaviour
         }
         else
         {
-         SceneManager.LoadScene("SampleScene");
+         SceneManager.LoadScene("Finish");
         }
     }
 

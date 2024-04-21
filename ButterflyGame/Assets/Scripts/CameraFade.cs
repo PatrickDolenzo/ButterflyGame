@@ -33,7 +33,7 @@ public class CameraFade : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log(alpha);
+        
         if (alpha >= 1f)
         {
                     alpha = 0f;
