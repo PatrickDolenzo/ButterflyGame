@@ -9,10 +9,21 @@ public class ColliderCheck : MonoBehaviour
     //Components
     public string _newcolour;
 
+    public AudioSource _hitsound;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        StartCoroutine(waiter());
+    }
+
+IEnumerator waiter()
+{
         Debug.Log("We just collided" + _newcolour);
+
+        _hitsound.Play();
+
+         yield return new WaitForSeconds (1);
 
         ColourManager._colour += _newcolour;
 
@@ -24,6 +35,11 @@ public class ColliderCheck : MonoBehaviour
         {
          SceneManager.LoadScene("Scrolling");
         }
-    }
+
+
+
+}
+
+
 
 }
