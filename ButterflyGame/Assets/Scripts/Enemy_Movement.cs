@@ -57,6 +57,9 @@ void OnCollisionEnter2D(Collision2D collision)
 {
     if(collision.transform.tag == "Player")
     {
+    CameraFade.alpha = 0f;
+    ColourManager._colour ="";
+    ColourManager._islast = false;
     SceneManager.LoadScene("GameOver");
     }
 }

@@ -13,7 +13,7 @@ public class CameraFade : MonoBehaviour
    
 
 
-    private float alpha = 0f; 
+    public static float alpha = 0f; 
     private Texture2D texture;
     private int direction = 0;
     private float time = 0f;
